@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  --pink-fantasy: #d06364;
+  --ligth-pink-fantasy: #ea9fa0;
+  --icons: #ea9fa0;
+  --border-form: #ea9fa0;
+  --title: #d06364;
+  --background: #fff;
+  --color-placeholder-btns: #fff;
+
+  /* colors hover */
+
+  --hover-btns: #773a3b;
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  background: var(--background);
+}
+
+body,
+button,
+input {
+  font-size: clamp(14px, 1.6rem, 2vw);
+  font-family: 'Poppins', sans-serif;
+}
+.content {
+  width: 100%;
+  margin: 0 auto;
+}
+/* deixa o label invisivel para a acessibilidade conseguir ler a label */
+.sr-only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+input,
+button {
+  height: 4rem;
+  border-radius: 0.8rem;
+}
+
+button {
+  font-weight: 500;
+  line-height: 0;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pink-fantasy);
+  color: var(--color-placeholder-btns);
+  cursor: pointer;
+}
+button:hover {
+  background: var(--hover-btns);
+  transition: 0.5s ease-in;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+button > img {
+  margin-right: 1rem;
+  width: 2rem;
+}
+.content header {
+  width: 77%;
+  margin: 3.5rem auto;
+  color: var(--pink-fantasy);
+}
